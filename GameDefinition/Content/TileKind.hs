@@ -1285,7 +1285,7 @@ barrelSpice = barrel
 -- *** Clear
 
 machineWall = TileKind
-  { tsymbol  = '%'
+  { tsymbol  = '✎'
   , tname    = "hardware rack"
   , tfreq    = [ (S_HARDWARE_RACK, 1)
                , (ROGUE_SET, 25), (NOISE_SET_LIT, 250), (POWER_SET_DARK, 250)

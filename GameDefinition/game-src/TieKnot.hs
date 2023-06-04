@@ -41,13 +41,13 @@ import           Game.LambdaHack.Server
 
 import qualified Client.UI.Content.Input as Content.Input
 import qualified Client.UI.Content.Screen as Content.Screen
-import qualified "Allure" Content.CaveKind
-import qualified "Allure" Content.FactionKind
-import qualified "Allure" Content.ItemKind
-import qualified "Allure" Content.ModeKind
-import qualified "Allure" Content.PlaceKind
-import qualified "Allure" Content.RuleKind
-import qualified "Allure" Content.TileKind
+import qualified Content.CaveKind
+import qualified Content.FactionKind
+import qualified Content.ItemKind
+import qualified Content.ModeKind
+import qualified Content.PlaceKind
+import qualified Content.RuleKind
+import qualified Content.TileKind
 import           Implementation.MonadServerImplementation (executorSer)
 
 -- | Tie the LambdaHack engine client, server and frontend code

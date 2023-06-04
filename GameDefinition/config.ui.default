@@ -70,13 +70,13 @@ HeroName_9 = ("Oleg Cracker", "he")
 movementViKeys_hjklyubn = True
 movementLeftHandKeys_axwdqezc = True
 ; recommended: "binary" or "dejavuBold"
-chosenFontset = "binary"
+chosenFontset = "dejavuBold"
 ; 1.0 means don't scale; 1.5, 2.0, 3.0 give good results, <0.7 very bad
 ; for scales < 1 try fontsets with bolder auxiliary fonts and/or HintingLight
 allFontsScale = 1.0
 ; NotFullscreen (default), BigBorderlessWindow (preferred), ModeChange.
 ; For 1920×1080 fullscreen, set allFontsScale = 1.5 above.
-fullscreenMode = NotFullscreen
+fullscreenMode = BigBorderlessWindow
 ; HP percent at which warning is emitted.
 hpWarningPercent = 20
 ; Wrap messages after this column (measured in small font, if available).
@@ -98,9 +98,12 @@ overrideCmdline = ""
 binaryRegular = FontProportional "BinarySansProLH-Regular.ttf.woff" 16 HintingHeavy
 binaryBold = FontProportional "BinarySansProLH-Semibold.ttf.woff" 16 HintingHeavy
 binaryMono = FontMonospace "BinaryCodeProLH-Bold.ttf.woff" 14 HintingHeavy
-dejavuRegular = FontProportional "DejaVuLGCSans.ttf.woff" 15 HintingHeavy
-dejavuBold = FontProportional "DejaVuLGCSans-Bold.ttf.woff" 13 HintingHeavy
-dejavuMono = FontMonospace "Hack-Bold.ttf.woff" 13 HintingHeavy
+eversonMonoBold = FontProportional "EversonMonoBold.ttf.woff" 32 HintingHeavy
+dejavuRegular = FontProportional "DejaVuLGCSans.ttf.woff" 32 HintingHeavy
+dejavuBold = FontProportional "DejaVuLGCSans-Bold.ttf.woff" 32 HintingHeavy
+dejavuMono = FontMonospace "Hack-Bold.ttf.woff" 32 HintingHeavy
+dejavuBitmap = FontMapBitmap "DejaVuLGCSans-Bold-32.bdf" 0
+eversonBitmap = FontMapBitmap "EversonMono-Bold-40.bdf" 0
 ; the map fonts (the format is: kind name size hinting cellSizeAdd):
 ; with allFontsScale < 1, try HintingLight for fuzzy, but less distorted shapes:
 16x16xwScalable = FontMapScalable "16x16xw.woff" 16 HintingHeavy 0
@@ -118,7 +121,8 @@ binary = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "16x16xwS
 
 ; best proportional:
 binary_original = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "16x16xwBitmap", fontPropRegular = "binaryRegular", fontPropBold = "binaryBold", fontMono = "binaryMono"}
-dejavuBold = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "16x16xwBitmap", fontPropRegular = "dejavuBold", fontPropBold = "dejavuBold", fontMono = "dejavuMono"}
+dejavuBold = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "dejavuBitmap", fontPropRegular = "dejavuBold", fontPropBold = "dejavuBold", fontMono = "dejavuMono"}
+eversonMonoBold = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "eversonBitmap", fontPropRegular = "eversonMonoBold", fontPropBold = "eversonMonoBold", fontMono = "eversonMonoBold"}
 
 ; decent proportional:
 binaryBold = FontSet {fontMapScalable = "16x16xwScalable", fontMapBitmap = "16x16xwBitmap", fontPropRegular = "binaryBold", fontPropBold = "binaryBold", fontMono = "binaryMono"}
